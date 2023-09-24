@@ -22,6 +22,7 @@
     "react-scripts": "^4.0.3",
     "react-share": "^4.4.1",
     "remark-gfm": "^3.0.1",
+    "sonar-scanner": "^3.1.0",
     "timeago-react": "^3.0.6",
     "web-vitals": "^2.1.4"
   },
@@ -29,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonar": "sonar-scanner"
   },
   "eslintConfig": {
     "extends": [
@@ -52,5 +54,6 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
