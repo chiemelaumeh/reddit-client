@@ -9,8 +9,6 @@ import axios from "axios";
 import Routing from "./components/Routing";
 
 axios.defaults.baseURL =  "https://myreddit-api.onrender.com";
-
-
 function App() {
   const { user, setUser } = useContext(UserContext);
   useEffect(() => {
