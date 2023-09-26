@@ -1,6 +1,6 @@
 import Headerbuttons from "./Headerbuttons";
 import Input from "./Input";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import AuthModalContext from "../context/AuthModalContext";
 import OutsideClickHandler from "react-outside-click-handler";
@@ -60,9 +60,14 @@ const Authmodal = () => {
       const response = await axios.post("/login", data, {
         withCredentials: true,
       });
-      setUser({ username });
+      // console.log(response)
+      setUser(response.data);
       // setWrongPassState(false)
-
+      console.log(user)
+      // useEffect(() => {
+      //   localStorage.setItem("user", JSON.stringify(response.data))
+      // }, [response.data])
+    
 
     } catch (error) {
       console.error(error.messagee);
