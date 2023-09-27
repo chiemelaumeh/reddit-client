@@ -77,7 +77,7 @@ const PostFormModal = () => {
         />
 
         <TextArea
-          placeholder={"Text (required) - Please Keep it nice and repecful :)"}
+          placeholder={"Text (required) - Please Keep it nice and repectful :)"}
           value={body}
           onChange={(e) => setBody(e.target.value)}
           required
