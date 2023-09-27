@@ -102,7 +102,7 @@ const Header = () => {
     await axios.get("/logout", {
       withCredentials: true,
     });
-    setUser("");
+    setUser({});
   };
 
   const doSearch = (e) => {
