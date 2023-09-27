@@ -29,7 +29,7 @@ const Routinglocation = () => {
         <Route exact path="/comments/:id" element={<Commentpage />} />
         <Route exact path="/search/:text" element={<SearchPage />} />
         <Route exact path="/error/404" element={<ErrorPage />} />
-        <Route exact path="/users/:id/verify/:token" element={<EmailVerify />}/>
+        {/* <Route exact path="/users/:id/verify/:token" element={<EmailVerify />}/> */}
         <Route exact path="/emailverified" element={<EmailVerified />}/>
         <Route exact path="/*" element={<ErrorPage />}/>
 

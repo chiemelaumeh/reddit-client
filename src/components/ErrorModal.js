@@ -5,7 +5,7 @@ import AuthModalContext from "../context/AuthModalContext";
 const ErrorModal = () => {
   const { errorStatus, setErrorStatus, modalType, setModalType, authReg, setAuthReg  } = useContext(ModalContext);
   const { modalVisibility, setModalVisibility } = useContext(AuthModalContext)
-  console.log(authReg)
+
   return (
     <>
       {errorStatus && (

@@ -26,12 +26,12 @@ const Postform = () => {
   };
 
   const popUpModal = () => {
-    if (!user.username) {
-      setModalVisibility(true);
-    } else {
+    // if (!user.username) {
+    // } else {
+      // setModalVisibility(true);
       getAllComunities();
       setPostFormModalVisibility(true);
-    }
+    // }
   };
 
   return (

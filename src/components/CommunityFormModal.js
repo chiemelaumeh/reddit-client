@@ -6,9 +6,9 @@ const CommunityFormModal = () => {
   const { showCommunity, setShowCommunity } = useContext(CommunityContext);
 
 
-  if (!showCommunity) {
-    return null;
-  }
+  // if (!showCommunity) {
+  //   return null;
+  // }
   return (
     <div className={showCommunity ? "community-page" : "hide-community-page"}>
       <OutsideClickHandler onOutsideClick={() => setShowCommunity(false)}>
