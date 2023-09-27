@@ -39,7 +39,7 @@ const PostFormModal = () => {
       const response = await axios.post(
         "/comments/",
         data,
-        { withCredentials: true }
+        // { withCredentials: true }
       );
 
       setNewPosts(response.data);

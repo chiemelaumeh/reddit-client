@@ -27,11 +27,15 @@ const CommunityPopUp = ({ closeModal }) => {
     closeModal();
     const data = { name, slogan };
     try {
+      // console.log("fw")
+      alert("Community Created!")
       const response = await axios.post("/communities", data, {
-        withCredentials: true,
+        // withCredentials: true,
       });
       setRedirect(`/r/` + name);
-      setShowHeader(true)
+      // setRedirect(`/r/` + props.chosenCommunity);
+     
+      // setShowHeader(true)
     } catch (error) {
       console.error(error.message);
     }

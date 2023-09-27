@@ -232,7 +232,7 @@ const Header = () => {
                 
                   </button>
 
-                <button
+                {/* <button
                   onClick={() => {
                     setOpenUpload(true);
                     setUserDropDownVisibilityClass("hidden");
@@ -242,7 +242,7 @@ const Header = () => {
                 >
                   <BsUpload className=" login-icon " />
                   Upload 
-                </button>
+                </button> */}
                 <button
                   onClick={changeLightMode}
                   href=""
@@ -252,10 +252,10 @@ const Header = () => {
 
                   {darkOrLight}
                 </button>
-                <button onClick={logout} href=""   className={openDiv}>
+                {/* <button onClick={logout} href=""   className={openDiv}>
                   <SlLogout className=" login-icon " />
                   Logout
-                </button>
+                </button> */}
               </div>
             </>
           )}
