@@ -148,7 +148,7 @@ const PostContent = (props) => {
                 </div>
               )}
 
-              {singleComment.author === user.username && !showEditandDelete && (
+              {/* {singleComment.author === user.username && !showEditandDelete && ( */}
                 <BsThreeDotsVertical
                   className="dots"
                   id={props._id}
@@ -162,7 +162,7 @@ const PostContent = (props) => {
                     setDeleteModalVisibility(false);
                   }}
                 />
-              )}
+              {/* )} */}
             </div>
             <h2>{singleComment.title}</h2>
             <div className="post-text">{props.body}</div>
