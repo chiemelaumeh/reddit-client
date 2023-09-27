@@ -63,7 +63,7 @@ const Authmodal = () => {
       // console.log(response)
       setUser(response.data);
       // setWrongPassState(false)
-      console.log(user)
+      // console.log(user)
       // useEffect(() => {
       //   localStorage.setItem("user", JSON.stringify(response.data))
       // }, [response.data])
