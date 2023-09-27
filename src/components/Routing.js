@@ -11,7 +11,7 @@ import Routinglocation from "./Routinglocation";
 import { useContext } from "react";
 import RedirectContext from "../context/RedirectContext";
 import RerenderContext from "../context/RerenderContext";
-import ErrorModal from "./ErrorModal";
+import ErrorModal from "./ErrorModal.js";
 
 const Routing = () => {
   const { redirect, setRedirect } = useContext(RedirectContext);
