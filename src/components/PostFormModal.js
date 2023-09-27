@@ -53,11 +53,11 @@ const PostFormModal = () => {
     if (selectedCommunity) {
       setRedirect("/r/" + selectedCommunity);
       setPostFormModalVisibility(false);
+      setTitle("");
+      setBody("");
     } else {
       alert("Please choose a community");
     }
-    setTitle("");
-    setBody("");
   }
   return (
     <div
@@ -70,14 +70,14 @@ const PostFormModal = () => {
         <input
           autoFocus
           required
-          placeholder={"Title"}
+          placeholder={"Title (required)"}
           value={title}
           className="input input-box"
           onChange={(e) => setTitle(e.target.value)}
         />
 
         <TextArea
-          placeholder={"Text (required)"}
+          placeholder={"Text (required) - Please Keep it nice and repecful :)"}
           value={body}
           onChange={(e) => setBody(e.target.value)}
           required
@@ -90,7 +90,7 @@ const PostFormModal = () => {
             <select className="selector" onChange={changeState}>
               <option required value="default">
                 {" "}
-                Please choose a community
+                 Choose a community
               </option>
               {allCommunities
                 ? allCommunities.map((oneCommunity) => {
@@ -120,7 +120,7 @@ const PostFormModal = () => {
             </button>
           </div>
         </div>
-            <button onClick={handleTwo} className=" create-btn" >Share your post!</button>
+            <button onClick={handleTwo} className=" create-btn" >Publish post</button>
       </div>
     </div>
   );
