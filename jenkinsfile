@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent {
         label "Build_Agent1"
 }
