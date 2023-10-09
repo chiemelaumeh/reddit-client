@@ -1,6 +1,8 @@
+ pipeline {
+    agent {
+        label "Build_Agent1"
+}
 
-pipeline {
-    agent any
        environment {
         registry = "756519817970.dkr.ecr.us-east-2.amazonaws.com/postboard-client"
     }
@@ -116,7 +118,7 @@ steps {
     stage('Docker Run') {
      steps{
          script {
-                sh 'docker run -d -p 8096:3000 --rm --name postboard-client-container 756519817970.dkr.ecr.us-east-2.amazonaws.com/postboard-client:latest'
+                sh 'docker run -d -p 8091:3000 --rm --name postboard-client-container 756519817970.dkr.ecr.us-east-2.amazonaws.com/postboard-client:latest'
             }
       }
     }
