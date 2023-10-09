@@ -3,6 +3,7 @@
         label "Build_Agent1"
 }
 
+
        environment {
         registry = "756519817970.dkr.ecr.us-east-2.amazonaws.com/postboard-client"
     }
