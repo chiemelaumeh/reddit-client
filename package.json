@@ -1,9 +1,9 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "publishConfig": {
-    "registry":"http://ec2-13-58-177-100.us-east-2.compute.amazonaws.com:8081/repository/postboard-client/"
-  },
+  //"publishConfig": {
+    //"registry":"http://ec2-13-58-177-100.us-east-2.compute.amazonaws.com:8081/repository/postboard-client/"
+  //},
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.10.1",
