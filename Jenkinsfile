@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                checkout scmGit(branches: [[name: '*/production']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/chiemelaumeh/reddit-client']])
+                checkout scm
             }
         }
         
