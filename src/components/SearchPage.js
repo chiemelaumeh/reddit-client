@@ -11,7 +11,7 @@ const SearchPage = (props) => {
 
   useEffect(() => {
     const getComments = async () => {
-      const response = await axios.get(`/comments?search=${text}`, {
+      const response = await axios.get(`/comments/find?search=${text}`, {
         withCredentials: true,
       });
 
