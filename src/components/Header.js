@@ -137,7 +137,7 @@ const Header = () => {
             className={theLightModeSearchBox}
             required
             type="text"
-            placeholder="Search myReddit"
+            placeholder="Search Minterest"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
@@ -223,14 +223,14 @@ const Header = () => {
                     : " show-box"
                 }
               >
-                <button   className={openDiv}  >
+                {/* <button   className={openDiv}  >
                 <FaRegUser className=" login-icon " />
               
                   {user.username}
                 
 
                 
-                  </button>
+                  </button> */}
 
                 {/* <button
                   onClick={() => {

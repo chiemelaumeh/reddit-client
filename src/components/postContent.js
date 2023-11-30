@@ -8,40 +8,17 @@ import UserContext from "../context/UserContext";
 import RedirectContext from "../context/RedirectContext";
 import RerenderContext from "../context/RerenderContext";
 import Voting from "./Voting";
+
 import AuthModalContext from "../context/AuthModalContext";
 import { Link } from "react-router-dom";
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  HatenaShareButton,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TumblrShareButton,
-  TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
-  WhatsappShareButton,
-  WorkplaceShareButton
-} from "react-share";
 
-import {
-  FacebookIcon, WhatsappIcon
-}
-from "react-share"
 import axios from "axios";
 <TimeAgo datetime={"2016-08-08 08:08:08"} locale="zh_CN" />;
 
 const PostContent = (props) => {
   const postComments = [props];
   const [shareBox, setSharebox] = useState("")
+  const [realArticles, setRealArticles ] = useState([])
 
   const {
     setPostModalVisibility,
@@ -69,6 +46,17 @@ const PostContent = (props) => {
     }
   };
 
+  // const fetchReal = async() => {
+  //   try {
+  //     const response = await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2023-10-12&sortBy=publishedAt&apiKey=ea6a8c6758644057912459fd1c3d169c")
+  //     setRealArticles(response.data.articles)
+  //   } catch (error) {
+  //     console.log(error.message)
+      
+  //   }
+  // }
+  // fetchReal()
+
   const navigateToCommunity = () => {
     setRedirect(`/r/` + props.chosenCommunity);
     setShowHeader(true)
@@ -81,6 +69,7 @@ const PostContent = (props) => {
       setPostModalVisibility(true);
     }
   };
+  
 
   return (
     <div>
@@ -90,16 +79,16 @@ const PostContent = (props) => {
             <div className="text-dots">
               <div className="posted-by-h5">
                 {" "}
-                Posted by {props.author}, in{" "}
+                Posted by {singleComment.author}, in{" "}
                 <p onClick={navigateToCommunity} className="community-text">
                   {" "}
-                  r/{props.chosenCommunity}
+                  m/{singleComment.chosenCommunity}
                 </p>{" "}
-                - <TimeAgo datetime={props.postedAt} />{" "}
+                - <TimeAgo datetime={singleComment.postedAt} />{" "}
               </div>
 
               {singleComment._id === showEditandDelete && (
-                <div id={props._id} className="edit-delete-div">
+                <div id={singleComment._id} className="edit-delete-div">
                   {!confirmDeleteVisibility && (
                     <button
                       onClick={() => {
@@ -112,7 +101,7 @@ const PostContent = (props) => {
                   )}
                   {confirmDeleteVisibility && (
                     <button
-                      id={props.id}
+                      id={singleComment.id}
                       onClick={() => {
                         deleteOnePost();
                         setShowEditandDelete(false);
@@ -127,7 +116,7 @@ const PostContent = (props) => {
                     className={
                       !deleteModalVisibility ? "delete-btn" : "hide-delete-btn"
                     }
-                    id={props.id}
+                    id={singleComment.id}
                     onClick={() => {
                       setDeleteModalVisibility(true);
                       setConfirmDeleteVisibility(true);
@@ -151,7 +140,7 @@ const PostContent = (props) => {
               {/* {singleComment.author === user.username && !showEditandDelete && ( */}
                 <BsThreeDotsVertical
                   className="dots"
-                  id={props._id}
+                  id={singleComment._id}
                   onClick={() => {
                     if (!showEditandDelete) {
                       setShowEditandDelete(singleComment._id);
@@ -165,7 +154,7 @@ const PostContent = (props) => {
               {/* )} */}
             </div>
             <h2>{singleComment.title}</h2>
-            <div className="post-text">{props.body}</div>
+            <div className="post-text">{singleComment.body}</div>
           </div>
         );
       })}

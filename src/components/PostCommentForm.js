@@ -54,6 +54,7 @@ const PostCommentForm = (props) => {
           required
           onChange={changeUserComment}
           value={userComment}
+          placeholder="Leave a comment. Please be respectful"
         ></textarea>
 
         <div className="btn-div">
