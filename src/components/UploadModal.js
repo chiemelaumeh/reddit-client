@@ -20,21 +20,21 @@ const UploadModal = () => {
 
   const [fileInputState, setFileInputState] = useState("");
 
-  useEffect(() => {
-    const showImage = async () => {
-      try {
-        const data = { user };
-        const response = await axios.post("/image/", data, {
-          withCredentials: true,
-        });
-        setUploadedImage(response.data);
+  // useEffect(() => {
+  //   const showImage = async () => {
+  //     try {
+  //       const data = { user };
+  //       const response = await axios.post("/image/", data, {
+  //         withCredentials: true,
+  //       });
+  //       setUploadedImage(response.data);
 
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    showImage();
-  }, [user]);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   showImage();
+  // }, [user]);
 
   
   const handlefileInputState = (e) => {
